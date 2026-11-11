@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Ansh Singh - AI / ML Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060a"/>
+      <stop offset="0.55" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#1a0b1f"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7ee8fa"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ff7eb3"/>
+      <animate attributeName="x1" values="0;-1;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.12" cy="0.2" r="0.45">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.9" cy="0.85" r="0.45">
+      <stop offset="0" stop-color="#ec4899" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.07"/>
+    </pattern>
+    <style>
+      .t { font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      .node { fill: #7ee8fa; animation: pulse 3s ease-in-out infinite; }
+      .node.p { fill: #ff7eb3; }
+      .edge { stroke: #7ee8fa; stroke-opacity: 0.18; stroke-width: 1.2; }
+      .flow { stroke: #ff7eb3; stroke-width: 1.6; stroke-dasharray: 6 120; animation: flow 3.5s linear infinite; }
+      .ecg { fill: none; stroke: #ff4d6d; stroke-width: 2; stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+      @keyframes flow { to { stroke-dashoffset: -126 } }
+      @keyframes draw { 0% { stroke-dashoffset: 900 } 60%,100% { stroke-dashoffset: 0 } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="10" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="10" fill="url(#dots)"/>
+  <rect width="1200" height="320" fill="url(#glowA)"/>
+  <rect width="1200" height="320" fill="url(#glowB)"/>
+
+  <!-- left: neural network -->
+  <g transform="translate(40,60)">
+    <g class="edge">
+      <line x1="0" y1="20" x2="70" y2="0"/><line x1="0" y1="20" x2="70" y2="60"/><line x1="0" y1="20" x2="70" y2="120"/><line x1="0" y1="20" x2="70" y2="180"/>
+      <line x1="0" y1="100" x2="70" y2="0"/><line x1="0" y1="100" x2="70" y2="60"/><line x1="0" y1="100" x2="70" y2="120"/><line x1="0" y1="100" x2="70" y2="180"/>
+      <line x1="0" y1="180" x2="70" y2="0"/><line x1="0" y1="180" x2="70" y2="60"/><line x1="0" y1="180" x2="70" y2="120"/><line x1="0" y1="180" x2="70" y2="180"/>
+      <line x1="70" y1="0" x2="140" y2="60"/><line x1="70" y1="60" x2="140" y2="60"/><line x1="70" y1="120" x2="140" y2="60"/><line x1="70" y1="180" x2="140" y2="60"/>
+      <line x1="70" y1="0" x2="140" y2="140"/><line x1="70" y1="60" x2="140" y2="140"/><line x1="70" y1="120" x2="140" y2="140"/><line x1="70" y1="180" x2="140" y2="140"/>
+    </g>
+    <line class="flow" x1="0" y1="100" x2="70" y2="60"/>
+    <line class="flow" x1="70" y1="60" x2="140" y2="140" style="animation-delay:1.2s"/>
+    <line class="flow" x1="0" y1="20" x2="70" y2="120" style="animation-delay:.6s"/>
+    <circle class="node" cx="0" cy="20" r="6"/>
+    <circle class="node" cx="0" cy="100" r="6" style="animation-delay:.4s"/>
+    <circle class="node" cx="0" cy="180" r="6" style="animation-delay:.8s"/>
+    <circle class="node p" cx="70" cy="0" r="6" style="animation-delay:.2s"/>
+    <circle class="node p" cx="70" cy="60" r="6" style="animation-delay:.6s"/>
+    <circle class="node p" cx="70" cy="120" r="6" style="animation-delay:1s"/>
+    <circle class="node p" cx="70" cy="180" r="6" style="animation-delay:1.4s"/>
+    <circle class="node" cx="140" cy="60" r="7" style="animation-delay:.9s"/>
+    <circle class="node" cx="140" cy="140" r="7" style="animation-delay:1.6s"/>
+  </g>
+
+  <!-- right: ECG / anomaly signal -->
+  <g transform="translate(985,150)">
+    <path class="ecg" d="M0 40 L40 40 L52 40 L60 10 L68 70 L76 -30 L86 60 L94 40 L120 40 L132 40 L140 20 L148 55 L156 40 L180 40"/>
+    <circle cx="76" cy="-30" r="5" fill="none" stroke="#ff4d6d" stroke-opacity="0.8">
+      <animate attributeName="r" values="4;14;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.9;0;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text class="t" x="90" y="100" text-anchor="middle" font-size="12" fill="#8b949e" letter-spacing="3">ANOMALY DETECTED</text>
+  </g>
+
+  <!-- title -->
+  <text class="t" x="600" y="138" text-anchor="middle" font-size="72" font-weight="800" fill="url(#title)" letter-spacing="1">AI / ML Engineer</text>
+  <text class="t" x="600" y="186" text-anchor="middle" font-size="20" fill="#c9d1d9" letter-spacing="2">LLMs · RAG · Agents · Anomaly Detection · MLOps</text>
+
+  <!-- chips -->
+  <g class="t" font-size="13" font-weight="600" text-anchor="middle">
+    <g transform="translate(372,222)"><rect x="-82" y="0" width="164" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#7ee8fa" stroke-opacity="0.4"/><text y="22" fill="#7ee8fa">400K+ USERS SHIPPED</text></g>
+    <g transform="translate(540,222)"><rect x="-72" y="0" width="144" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#ff7eb3" stroke-opacity="0.4"/><text y="22" fill="#ff7eb3">IEEE PAPER · 2026</text></g>
+    <g transform="translate(700,222)"><rect x="-72" y="0" width="144" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#a78bfa" stroke-opacity="0.4"/><text y="22" fill="#a78bfa">IBM · GUMLABS</text></g>
+    <g transform="translate(860,222)"><rect x="-80" y="0" width="160" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#4ade80" stroke-opacity="0.4"/><text y="22" fill="#4ade80">OPEN TO FULL-TIME</text></g>
+  </g>
+</svg>
