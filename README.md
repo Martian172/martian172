@@ -145,19 +145,10 @@ I've also written an **IEEE conference paper** 📝 on physics-informed federate
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-f2c811?style=for-the-badge&logo=powerbi&logoColor=black)
 
-## 📈 GitHub Stats
 
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Martian172&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Martian172&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top languages" />
-  <br />
-  <img src="https://streak-stats.demolab.com?user=Martian172&theme=tokyonight&hide_border=true" alt="GitHub streak" />
 </div>
 
-## 🏆 Leadership
 
-- 🎤 **Core Organiser, ICAPIE Research Conference**: coordinated speakers and paper submissions from 15+ institutions
-- 🧑‍🤝‍🧑 **Class Representative, USAR (2023–2026)**: the main link between 120+ students and faculty
 
 <br />
 
